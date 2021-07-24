@@ -20,11 +20,11 @@ def shell_sort(li):
         d = li_len // 2
         while d >= 1:
             insert_sort_gap(li, d)
-            d = d // 2r
+            d = d // 2
 
 
 if __name__ == '__main__':
-    li = [i for i in range(11)]
+    li = [i for i in range(17)]
     random.shuffle(li)
     # insert_sort(li)
     shell_sort(li)
