@@ -4,7 +4,7 @@ import random
 def quick_sort(li, left, right):
     if left < right:
         mid = separate_data(li, left, right)
-        quick_sort(li, 0, mid - 1)
+        quick_sort(li, left, mid - 1)
         quick_sort(li, mid + 1, right)
 
 
@@ -18,12 +18,14 @@ def separate_data(li, left, right):
             if li[right] < temp:
                 li[left] = li[right]
                 left_is_blank_flag = False
+                left += 1
             else:
                 right -= 1
         else:
             if li[left] > temp:
                 li[right] = li[left]
                 left_is_blank_flag = True
+                right -= 1
             else:
                 left += 1
     li[left] = temp  # left = right at this step
