@@ -75,4 +75,4 @@ def maze_path(x0, y0, x1, y1):
 
 
 if __name__ == '__main__':
-    maze_path(1, 1, 8, 8)
+    maze_path(1, 1, 8, 2)
